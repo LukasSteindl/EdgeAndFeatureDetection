@@ -1,0 +1,30 @@
+﻿<Window x:Class="Edgedetection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Edgedetection"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="722.8" Width="1018.8" >
+    <Grid>
+        <StackPanel Orientation="Vertical" >
+            <Label>Kantendetektor</Label>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <Image Name="input" Source="home.jpg" VerticalAlignment="Stretch" Height="200" />
+                <Button x:Name="button" Content="Gray Scale" VerticalAlignment="Top"  Click="button_Click"  />
+                <Image Name="output" Source="home.jpg" VerticalAlignment="Stretch"  Height="200" />
+                <Button x:Name="button1" Content="Detect Edges" VerticalAlignment="Top"  Click="button1_Click"/>
+                <Image Name="outputedges" Source="home.jpg" VerticalAlignment="Stretch" Height="200"  />
+            </StackPanel>
+            <Label>Moravec Merkmaldetektor</Label>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+               
+                <Image Name="Merkmal" Source="home.jpg" VerticalAlignment="Stretch" Height="400"  />
+                <StackPanel>
+                <Slider Name="Sliderthreshold" Minimum="0" Maximum="10000" Value="50" Width="100" ValueChanged="Sliderthreshold_ValueChanged"/>
+                    <Button  Content="Points of interest" VerticalAlignment="Top" Click="Button_Click_1" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

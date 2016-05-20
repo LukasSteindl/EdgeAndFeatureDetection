@@ -100,7 +100,13 @@
     <Resource Include="caribbean-sea-06.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="home.JPG" />
+    <EmbeddedResource Include="home.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

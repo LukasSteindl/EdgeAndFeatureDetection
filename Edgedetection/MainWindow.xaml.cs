@@ -34,7 +34,8 @@ namespace Edgedetection
         private void button_Click(object sender, RoutedEventArgs e)
         {
             ImageSource img = input.Source;
-            Bitmap b = new Bitmap(@"C:\Users\lukast\OneDrive\Uni\1_Interaktive Systeme\Edgedetection\Edgedetection\home.jpg");
+            
+            Bitmap b = Properties.Resources.home;
             Console.WriteLine(b.GetPixel(0, 1).R);
             Console.WriteLine(b.GetPixel(0, 1).G);
             Console.WriteLine(b.GetPixel(0, 1).B);

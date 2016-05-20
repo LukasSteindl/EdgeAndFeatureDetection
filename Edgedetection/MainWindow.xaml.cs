@@ -26,6 +26,7 @@ namespace Edgedetection
         public MainWindow()
         {
             InitializeComponent();
+            Console.Write("Test")
             button_Click(null, null);
         }
         Bitmap grayscaleinput;

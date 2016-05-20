@@ -26,7 +26,7 @@ namespace Edgedetection
         public MainWindow()
         {
             InitializeComponent();
-            Console.Write("Test");
+            input.Source = BitmapToImageSource(Properties.Resources.home);
             button_Click(null, null);
         }
         Bitmap grayscaleinput;
@@ -96,7 +96,7 @@ namespace Edgedetection
                     //copy existing pixels to empty 5x5 grid to avoid corner issues
                     int[,] subimage = getSubimage(x, y, 5, 2);
                     double activationstrenght = Math.Sqrt(Math.Pow(convolution(sobelkernel, subimage), 2) + Math.Pow(convolution(sobelkernel2, subimage), 2));
-                    int n = Convert.ToInt32(activationstrenght * 0.1);
+                    int n = 255-Convert.ToInt32(activationstrenght * 0.31);
                     output.SetPixel(x, y, System.Drawing.Color.FromArgb(n, n, n));
                 }
             outputedges.Source = BitmapToImageSource(output);

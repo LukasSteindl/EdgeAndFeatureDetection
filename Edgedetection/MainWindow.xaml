@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Edgedetection"
         mc:Ignorable="d"
-        Title="MainWindow" Height="722.8" Width="1018.8" >
+        Title="MainWindow" Height="822.8" Width="1458.8" >
     <Grid>
         <StackPanel Orientation="Vertical" >
             <Label>Kantendetektor</Label>
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <Image Name="input" Source="home.jpg" VerticalAlignment="Stretch" Height="200" />
+                <Image Name="input" Source="home.JPG" VerticalAlignment="Stretch" Height="300" />
                 <Button x:Name="button" Content="Gray Scale" VerticalAlignment="Top"  Click="button_Click"  />
-                <Image Name="output" Source="home.jpg" VerticalAlignment="Stretch"  Height="200" />
-                <Button x:Name="button1" Content="Detect Edges" VerticalAlignment="Top"  Click="button1_Click"/>
-                <Image Name="outputedges" Source="home.jpg" VerticalAlignment="Stretch" Height="200"  />
+                <Image Name="output" Source="home.jpg" VerticalAlignment="Stretch"  Height="300" />
             </StackPanel>
-            <Label>Moravec Merkmaldetektor</Label>
+            <Label>Sobelkern Kantendetektor und Moravec Merkmaldetektor</Label>
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-               
+                <Button x:Name="button1" Content="Detect Edges" VerticalAlignment="Top"  Click="button1_Click"/>
+                <Image Name="outputedges" Source="home.jpg" VerticalAlignment="Stretch" Height="400"  />
+
                 <Image Name="Merkmal" Source="home.jpg" VerticalAlignment="Stretch" Height="400"  />
                 <StackPanel>
                 <Slider Name="Sliderthreshold" Minimum="0" Maximum="10000" Value="50" Width="100" ValueChanged="Sliderthreshold_ValueChanged"/>
